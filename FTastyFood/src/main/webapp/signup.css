@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f1f1f1;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-image: url('https://thumbs.dreamstime.com/b/people-eating-lunchboxes-grey-table-top-view-healthy-food-delivery-161242402.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);  /* Dark overlay */
+            z-index: 1;
+        }
+
+        .signup-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 2;  /* Place card above overlay */
+        }
+
+        .signup-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .logo-container img {
+            width: 280px;
+            height: auto;
+            object-fit: contain;
+            margin-bottom: 0;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            font-size: 24px;
+            color: #282c3f;
+            margin-bottom: 8px;
+        }
+
+        .form-header p {
+            color: #686b78;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #282c3f;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1.5px solid #d4d5d9;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            background-color: #ffffff;
+        }
+
+        .form-group textarea {
+            height: 80px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #ffc107;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(255, 193, 7, 0.1);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #ffc107;
+            color: #282c3f;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #ffb300;
+            transform: translateY(-2px);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .signin-link {
+            margin-top: 25px;
+            text-align: center;
+            color: #686b78;
+            font-size: 14px;
+            padding-top: 20px;
+            border-top: 1px solid #f1f1f1;
+        }
+
+        .signin-link a {
+            color: #ffc107;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .signin-link a:hover {
+            color: #ffb300;
+        }
+
+        .error-message {
+            color: #ff3b30;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .terms-text {
+            margin-top: 20px;
+            text-align: center;
+            color: #686b78;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .terms-text a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        .terms-text a:hover {
+            color: #ffb300;
+        }
+
+        @media screen and (max-width: 480px) {
+            .signup-card {
+                padding: 20px;
+            }
+
+            .form-header h2 {
+                font-size: 20px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 10px;
+            }
+        }
+
+        /* Add these styles for the select element */
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1.5px solid #d4d5d9;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            background-color: #ffffff;
+            color: #282c3f;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 15px;
+        }
+
+        .form-group select:focus {
+            border-color: #ffc107;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(255, 193, 7, 0.1);
+        }
+
+        .form-group select option {
+            color: #282c3f;
+            padding: 10px;
+        }

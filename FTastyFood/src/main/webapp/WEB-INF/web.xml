@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+  <!-- Application name -->
+  <display-name>FoodieFly</display-name>
+
+  <!-- Welcome file -->
+  <welcome-file-list>
+    <welcome-file>home.html</welcome-file>
+  </welcome-file-list>
+
+  <!-- Example servlet configuration -->
+  <servlet>
+    <servlet-name>FoodieServlet</servlet-name>
+    <servlet-class>com.foodiefly.FoodieServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>FoodieServlet</servlet-name>
+    <url-pattern>/food</url-pattern>
+  </servlet-mapping>
+
+</web-app>

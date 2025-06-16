@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Foodie Fly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="icon" type="image/x-icon" href="images\favicon.ico">
+</head>
+<body>
+    <div class="signup-card">
+        <div class="logo-container">
+            <img src="images/foodieFlyU.jpg" alt="Foodie Fly Logo">
+        </div>
+        
+        <div class="form-header">
+            <h2>Create Account</h2>
+            <p>Join Foodie Fly today</p>
+        </div>
+
+        <form action="signUpServlet" method="post">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="username">User Name</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username" 
+                    placeholder="Enter your username"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Create a password"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Enter your email"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    placeholder="Enter your phone number"
+                    pattern="[0-9]{10}"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="address">Delivery Address</label>
+                <textarea 
+                    id="address" 
+                    name="address" 
+                    placeholder="Enter your delivery address"
+                    required
+                ></textarea>
+            </div>
+            
+            
+            <div class="form-group">
+        <label for="role">Role</label>
+        <select id="role" name="role" required>
+            <option value="">-- Select Role --</option>
+            <option value="Customer">Customer</option>
+            <option value="RestaurantAdmin">Restaurant Admin</option>
+            <option value="SuperAdmin">Super Admin</option>
+            <option value="DeliveryAgent">Delivery Agent</option>
+        </select>
+   	 </div>
+            
+
+            <button type="submit" class="submit-btn">CREATE ACCOUNT</button>
+            
+            <div class="terms-text">
+                By creating an account, I accept Foodie Fly's 
+                <a href="#">Terms & Conditions</a> and 
+                <a href="#">Privacy Policy</a>
+            </div>
+            <input type="hidden" name="action" value="add">
+        </form>
+        
+    
+        
+    </div>
+    
+</body>
+</html>
